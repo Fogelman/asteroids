@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3275731744900225217}
   - component: {fileID: 6049908472073587142}
   m_Layer: 0
-  m_Name: Sphere 1
+  m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,6 +108,8 @@ MonoBehaviour:
   xOrg: 0
   yOrg: 0
   scale: 1
+  explosionPrefab: {fileID: 7397040857056645987, guid: 4f0e32a8b25374617b2d1cf6f9316ac7,
+    type: 3}
 --- !u!54 &6049908472073587142
 Rigidbody:
   m_ObjectHideFlags: 0

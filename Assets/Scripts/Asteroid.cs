@@ -6,6 +6,7 @@ public class Asteroid : MonoBehaviour {
     public float xOrg; // posição X no Perlin Noise
     public float yOrg; // posição Y no Perlin Noise
     public float scale = 1.0F; // escala na busca do Perlin Noise
+    public Transform explosionPrefab;
 
     private Texture2D noiseTex; // textura de ruido
     private Color[] pix; // pixels da imagem
@@ -56,4 +57,15 @@ public class Asteroid : MonoBehaviour {
     void Update () {
         CalcNoise ();
     }
+
+    void OnCollisionEnter (Collision collision) {
+        ContactPoint contact = collision.contacts[0];
+        Quaternion rot = Quaternion.FromToRotation (Vector3.up, contact.normal);
+        Vector3 pos = contact.point;
+        var instancia = Instantiate (explosionPrefab, pos, rot);
+        Destroy (instancia.gameObject, 0.5f);
+        Destroy (collision.gameObject);
+        Destroy (gameObject);
+    }
+
 }
