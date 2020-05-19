@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
         float x = Input.GetAxis ("Horizontal");
         float z = Input.GetAxis ("Vertical");
 
+        anim.SetBool ("jump", Input.GetButtonDown ("Jump"));
         anim.SetFloat ("turn", x);
         anim.SetFloat ("run", z);
 

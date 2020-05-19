@@ -2147,6 +2147,7 @@ GameObject:
   - component: {fileID: 5176252255258062869}
   - component: {fileID: 5176252254760647106}
   - component: {fileID: 5176252254760647133}
+  - component: {fileID: 326598828}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -2225,6 +2226,20 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!136 &326598828
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5176252255265473491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5176252255265473493
 GameObject:
   m_ObjectHideFlags: 0
