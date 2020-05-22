@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Welcome.unity
+    guid: 1b76e3fbb553346c28747b711e0a9792
+  - enabled: 1
     path: Assets/Scenes/Asteroids.unity
     guid: 2f7392b775a484b6480816bbe53489b6
   - enabled: 1
@@ -14,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cargo.unity
     guid: 8e6659f66683c441ebed6d057617dbd9
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: e06b97f13873d4b4bb84997da6afbd03
   m_configObjects: {}
