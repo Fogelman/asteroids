@@ -63,8 +63,13 @@ public class Asteroid : MonoBehaviour {
         Quaternion rot = Quaternion.FromToRotation (Vector3.up, contact.normal);
         Vector3 pos = contact.point;
         var instancia = Instantiate (explosionPrefab, pos, rot);
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer ("Player")) {
+            collision.gameObject.SendMessage ("Damage");
+        } else {
+            Destroy (collision.gameObject);
+        }
         Destroy (instancia.gameObject, 0.5f);
-        Destroy (collision.gameObject);
         Destroy (gameObject);
     }
 

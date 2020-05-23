@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spaceship : MonoBehaviour {
 
@@ -36,5 +37,13 @@ public class Spaceship : MonoBehaviour {
         rb.AddForce (transform.forward * speed * p);
         rb.AddTorque (transform.up * torque * h);
         rb.AddTorque (transform.right * torque * v);
+    }
+
+    void Damage () {
+        GameState.lives -= 1;
+        if (GameState.lives <= 0) {
+            SceneManager.LoadScene ("GameOver");
+
+        }
     }
 }

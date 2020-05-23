@@ -20,7 +20,7 @@ public class GameOver : MonoBehaviour {
     }
     void PlayGame () {
         GameState.Restart ();
-        SceneManager.LoadScene ("Space");
+        SceneManager.LoadScene ("Asteroids");
 
     }
 

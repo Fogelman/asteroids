@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour {
 
@@ -11,6 +12,14 @@ public class Enemy : MonoBehaviour {
     }
     void Update () {
         agent.SetDestination (target.transform.position);
+    }
+
+    void OnTriggerEnter (Collider other) {
+
+        if (other.gameObject.layer != LayerMask.NameToLayer ("Player")) {
+            return;
+        }
+        other.gameObject.SendMessage ("Damage");
     }
 
 }

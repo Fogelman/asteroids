@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
     public float speed = 8; // velocidade do jogador
@@ -28,10 +29,13 @@ public class PlayerController : MonoBehaviour {
             velocity.y = -1.0f;
         }
 
+        if (Input.GetKeyDown (KeyCode.Space)) {
+            anim.SetTrigger ("dance");
+        }
+
         float x = Input.GetAxis ("Horizontal");
         float z = Input.GetAxis ("Vertical");
 
-        anim.SetBool ("jump", Input.GetButtonDown ("Jump"));
         anim.SetFloat ("turn", x);
         anim.SetFloat ("run", z);
 
@@ -47,4 +51,13 @@ public class PlayerController : MonoBehaviour {
         character.Move (velocity * Time.deltaTime);
 
     }
+
+    void Damage () {
+        GameState.lives -= 1;
+        if (GameState.lives <= 0) {
+            SceneManager.LoadScene ("GameOver");
+
+        }
+    }
+
 }
