@@ -17,6 +17,12 @@ public class PlayerController : MonoBehaviour {
         character = gameObject.GetComponent<CharacterController> ();
         anim = GetComponent<Animator> ();
 
+        if (!GameState.position.Equals (Vector3.zero) && SceneManager.GetActiveScene ().name == "Mars") {
+            transform.position = GameState.position;
+            GameState.position = Vector3.zero;
+            transform.Rotate (Vector3.up * 180);
+        }
+
     }
 
     void Update () {

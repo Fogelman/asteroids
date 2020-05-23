@@ -756,7 +756,10 @@ MonoBehaviour:
 
     LAND:
 
-    ARROW MOVE'
+    ARROW MOVE
+
+
+    GET THE HIDDEN ROCKS AND FLEE IN THE SPACESHIP'
 --- !u!222 &1723009780
 CanvasRenderer:
   m_ObjectHideFlags: 0

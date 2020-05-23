@@ -1111,18 +1111,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 326598828, guid: 5e4ac4872670c42f68292d63c2ff4ed7, type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 326598828, guid: 5e4ac4872670c42f68292d63c2ff4ed7, type: 3}
-      propertyPath: m_Height
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 326598828, guid: 5e4ac4872670c42f68292d63c2ff4ed7, type: 3}
-      propertyPath: m_Center.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5176252255265473491, guid: 5e4ac4872670c42f68292d63c2ff4ed7,
         type: 3}
       propertyPath: m_Name
@@ -1257,6 +1245,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6521428650300886862}
+  - component: {fileID: 6521428650300724079}
+  - component: {fileID: 6521428650300724080}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -1264,6 +1254,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &6521428650300724079
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6521428650300724078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: f3e744b8d70c245af926a821441a23cf, type: 3}
+--- !u!114 &6521428650300724080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6521428650300724078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d55bf3c8a4b4b6c80bea21aee0031b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6521428650300886860
 Transform:
   m_ObjectHideFlags: 0
